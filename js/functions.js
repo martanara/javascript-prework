@@ -8,28 +8,48 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
 
+function printResult(result){
+	let div = document.createElement('div');
+	div.innerHTML = result;
+	document.getElementById('result').appendChild(div);
+}
+
+function clearResult(){
+	document.getElementById('result').innerHTML = '';
+}
+
 function getMoveName(argMoveId){
     if(argMoveId == 1){
-      return 'papier';
+    return 'papier';
     } else if (argMoveId == 2) {
-        return 'kamień';
+    return 'kamień';
     } else if (argMoveId == 3) {
-        return 'nożyce';
+    return 'nożyce';
     }
   
     printMessage('Nie znam ruchu o id: ' + argMoveId + '.');
     return 'nieznany ruch';
-  }
+}
 
-function displayResult(argComputerMove, argPlayerMove){
+function gameResult(argComputerMove, argPlayerMove){
+    if( argComputerMove == 'kamień' && argPlayerMove == 'papier' || argComputerMove == 'papier' && argPlayerMove == 'nożyce' || argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+    return 'won';
+    } else if (argComputerMove == argPlayerMove) {
+    return 'remis';
+    } else {
+    return 'lost';
+    }
+}
+
+function displayResult(argComputerMove, argPlayerMove, argResult){
 	console.log('Moves: ', argComputerMove, argPlayerMove)
     printMessage('Komputer wylosował: ' + argComputerMove + ', gracz wybrał: ' + argPlayerMove);
   
-    if( argComputerMove == 'kamień' && argPlayerMove == 'papier' || argComputerMove == 'papier' && argPlayerMove == 'nożyce' || argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+    if( argResult == 'won'){
         printMessage('Wygrywasz!');
-    } else if (argComputerMove == argPlayerMove) {
-        printMessage('Remis!')
+    } else if (argResult == 'lost') {
+        printMessage('Przegrywasz :(')
     } else {
-        printMessage('Przegrywasz :(');
+        printMessage('Remis')
     }
-  }
+}

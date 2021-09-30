@@ -1,10 +1,23 @@
+let computerWins = 0;
+let playerWins = 0;
+
 function playGame(arg){
     clearMessages()
+    clearResult()
     let randomNumber = Math.floor(Math.random() * 3 + 1);
     let computerMove = getMoveName(randomNumber);
     let playerInput = arg;
     let playerMove = getMoveName(playerInput);
-    displayResult(computerMove, playerMove)
+    let result = gameResult(computerMove, playerMove);
+    displayResult(computerMove, playerMove, result);
+    
+    if (result == 'won'){
+      playerWins++;
+    } else if (result == 'lost'){
+      computerWins++;
+    }
+
+    printResult('Komputer: ' + computerWins + ' vs ' + 'Gracz: ' + playerWins)
 }
 
 document.getElementById('play-paper').addEventListener('click', function(){
@@ -18,7 +31,6 @@ document.getElementById('play-rock').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
     playGame(3);
   });
-
   
   /* 
 
