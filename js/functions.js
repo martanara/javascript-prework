@@ -10,9 +10,9 @@ function clearMessages(){
 
 function getMoveName(argMoveId){
     if(argMoveId == 1){
-      return 'kamień';
+      return 'papier';
     } else if (argMoveId == 2) {
-        return 'papier';
+        return 'kamień';
     } else if (argMoveId == 3) {
         return 'nożyce';
     }
@@ -26,10 +26,10 @@ function displayResult(argComputerMove, argPlayerMove){
     printMessage('Komputer wylosował: ' + argComputerMove + ', gracz wybrał: ' + argPlayerMove);
   
     if( argComputerMove == 'kamień' && argPlayerMove == 'papier' || argComputerMove == 'papier' && argPlayerMove == 'nożyce' || argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
-        printMessage('Ty wygrywasz!');
+        printMessage('Gracz wygrywa!');
     } else if (argComputerMove == argPlayerMove) {
         printMessage('Remis!')
     } else {
-        printMessage('Tym razem przegrywasz :(');
+        printMessage('Gracz przegrywa :(');
     }
   }
