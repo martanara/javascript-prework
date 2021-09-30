@@ -1,0 +1,100 @@
+$font-primary: 'Roboto Mono', monospace;
+$font-secondary: 'Rubik', sans-serif;
+$color-brick: #D44735;
+$color-gray: #E9EDF0;
+$color-green: #2CAEAD;
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    line-height: 1.7;
+    font-family: $font-primary;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    font-family: $font-primary;
+    font-size: 18px;
+    background-color: $color-gray;
+}
+
+/* Header */
+
+.splash {
+    min-height: 400px;
+    background-image: url('https://images.pexels.com/photos/4965829/pexels-photo-4965829.jpeg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-secondary;
+    color: $color-green
+}
+
+h1 {
+    font-size: 45px;
+}
+
+/* Game */
+
+.buttons {
+    display: flex;
+}
+
+.choice {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    padding: 50px;
+    align-items: center;
+}
+
+.choice i {
+    font-size: 30px;
+    background-color: $color-brick;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: white;
+}
+
+.messages {
+    height: 130px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 0 70px 30px 70px;
+    padding-top: 30px;
+}
+
+/* Footer */
+
+.page-footer {
+    background-color: $color-green;
+    height: 60px;
+    color: white;
+    padding: 2px;
+}

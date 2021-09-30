@@ -7,8 +7,6 @@ function playGame(arg){
     displayResult(computerMove, playerMove)
 }
 
-
-
 document.getElementById('play-paper').addEventListener('click', function(){
     playGame(1);
   });

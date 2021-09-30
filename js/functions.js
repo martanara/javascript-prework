@@ -26,10 +26,10 @@ function displayResult(argComputerMove, argPlayerMove){
     printMessage('Komputer wylosował: ' + argComputerMove + ', gracz wybrał: ' + argPlayerMove);
   
     if( argComputerMove == 'kamień' && argPlayerMove == 'papier' || argComputerMove == 'papier' && argPlayerMove == 'nożyce' || argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
-        printMessage('Gracz wygrywa!');
+        printMessage('Wygrywasz!');
     } else if (argComputerMove == argPlayerMove) {
         printMessage('Remis!')
     } else {
-        printMessage('Gracz przegrywa :(');
+        printMessage('Przegrywasz :(');
     }
   }

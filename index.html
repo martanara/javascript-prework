@@ -3,17 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container">
-		<div id="buttons">
-			<button id="play-paper">Papier</button>
-			<button id="play-rock">Kamień</button>
-			<button id="play-scissors">Nożyce</button>
+	<header class="splash">
+		<div class="inner-splash">
+			<h1>Papier, Kamień, Nożyce</h1>
+			<h2>Zmierz się z przeznaczeniem!</h2>
 		</div>
-		<div id="messages"></div>
-	</div>
+	</header>
+	<section>
+		<div class="container">
+			<div id="buttons" class="buttons">
+				<div class="choice">
+					<i class="far fa-hand-paper"></i>
+					<button id="play-paper" class="btn">Papier</button>
+				</div>
+				<div class="choice">
+					<i class="far fa-hand-rock"></i>
+					<button id="play-rock" class="btn">Kamień</button>
+				</div>
+				<div class="choice">
+					<i class="far fa-hand-scissors"></i>
+					<button id="play-scissors" class="btn">Nożyce</button>
+				</div>
+			</div>
+			<div id="messages" class="messages"></div>
+		</div>
+	</section>
+	<footer class="page-footer">
+		<p>&copy; Marta Nara. All rights reserved.</p>
+	</footer>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
