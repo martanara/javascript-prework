@@ -6,10 +6,10 @@
         clearMessages()
         clearResult()
         const randomNumber = Math.floor(Math.random() * 3 + 1);
-        let computerMove = getMoveName(randomNumber);
+        const computerMove = getMoveName(randomNumber);
         const playerInput = arg;
         const playerMove = getMoveName(playerInput);
-        let result = gameResult(computerMove, playerMove);
+        const result = gameResult(computerMove, playerMove);
 
         if (result == 'won'){
           playerWins++;
