@@ -1,6 +1,6 @@
 
 const printMessage = function(msg) {
-    let div = document.createElement('div');
+    const div = document.createElement('div');
     div.innerHTML = msg;
     document.getElementById('messages').appendChild(div);
 }
@@ -10,7 +10,7 @@ const clearMessages = function() {
 }
 
 const printResult = function(result){
-    let div = document.createElement('div');
+    const div = document.createElement('div');
     div.innerHTML = result;
     document.getElementById('result').appendChild(div);
 }
